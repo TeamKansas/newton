@@ -1,0 +1,41 @@
+html {
+    background-color: rgb(25,25,35);;
+    color: white;
+    font-size: 15px;
+}
+h3 {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+p {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.view {
+    border: solid white 1px;
+    position: absolute;
+    top: 10px;
+    left: calc(23% + 25px);
+    overflow:visible;
+}
+.options {
+    border: solid darkgray 3px;
+    border-radius: 10px;
+    background-color: rgb(55,75,100);
+    width:23%;
+    padding:4px;
+}
+.equation {
+    font-family:'Courier New', Courier, monospace;
+    background-color: rgb(35,35,55);
+    width:fit-content
+    /* margin: 20px; */
+}
+.ball {
+    position:absolute;
+    border:solid black;
+    background-color: black;
+    width: 7px;
+    height: 7px;
+    border-radius:7px;
+}

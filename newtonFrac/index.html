@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Newton fractal Viewer</title>
+        <link rel="stylesheet" href="newton.css"/>
+        <script src="newton.js" defer></script>
+    </head>
+    <body>
+        <div class="options">
+            <header><h1>Newton Fractal Viewer!</h1></header>
+            <label for="iter">iteration count</label><input id="iter" type="number" value="60" min="1" max="50">
+            <br>
+            <label for="drag">Click to drag zeros</label><input id="drag" type="checkbox" value="true"> <br>
+            <label for="color">Color scheme</label><select id="color">
+                <option value="4">Tricolor</option>
+                <option value="2">iteration chromatic</option>
+                <option value="3">iteration glow</option>
+                <option value="5">Inverse iteration glow</option>
+                <option value="1">Chromatic zeros</option>
+            </select>
+            <button id="accept">accept</button>
+            <p>Press space to alternate which zero the cursor controls (the three zeros are denoted by the colored circles). The selected zero is highlighted in white. Click the point where you wish to move the selected zero</p>
+            <h3>What is a newton fractal?</h3>
+            <p>A Newton fractal is created by performing a newton approximation on every point of a complex function and displaying the final result based on the initial and final Z values</p>
+            <p>Newton's method is defined by the iteration of the following series:</p>
+            <p class="equation">Z -> Z - F(Z)/F'(Z)</p>
+            <p>Where <span class="equation">F(Z)</span> is the function (in our case a complex function), and <span class="equation">F'(Z)</span> is the first derivative of the function</p>
+            <p>In this program the function is defined by:</p>
+            <p class="equation">F(Z) = (Z - C1)(Z - C2)(Z - C3)</p> 
+            <p>where <span class="equation">C1</span>, <span class="equation">C2</span>, and <span class="equation">C3</span> are defined by the interactive zeros</p>
+        </div>
+        <canvas class="view" id="view" width="650" height="650">Uh-Oh! It looks like there was a problem displaying the canvas!</canvas>
+    </body>
+</html>
